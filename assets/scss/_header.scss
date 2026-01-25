@@ -1,11 +1,128 @@
 // styles du header
 @use 'globals' as *;
-
+@use 'mixins/mixins' as *;
 header {
-    nav{
-        background-color: $terciary-color;
-        a {
-            color: white;
+    background: $terciary-color;
+    color: #000000;
+    font-weight: bold;
+
+    /* TOP BAR */
+    .nav-top {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, .15);
+
+        padding-block: .6rem;
+        padding-inline: clamp(1rem, 4vw, 3rem);
+
+        .nav-list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+
+            font-size: clamp(.85rem, 1.2vw, 1rem);
+            opacity: .95;
+
+            li {
+                white-space: nowrap;
+            }
+        }
+    }
+
+    /* MAIN BAR */
+    .under-header {
+        width: 100%;
+        padding-block: clamp(.9rem, 2vw, 1.4rem);
+        padding-inline: clamp(1rem, 4vw, 3rem);
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: clamp(1rem, 3vw, 2.5rem);
+
+        .site-title a {
+                display: inline-block; // 🔑 obligatoire pour transform
+                transition:
+                color .3s ease,
+                text-shadow .3s ease,
+                transform .25s ease;
+            }
+        
+            .site-title a:hover {
+                color: $primary-color;
+                text-shadow: 0 0 .5rem rgba(156, 119, 8, .4);
+                transform: scale(1.06); // 🔥 grossit légèrement
+            }
+        img {
+            width: clamp(9rem, 16vw, 14rem);
+            aspect-ratio: 5 / 1;
+            /* logo oblong */
+            object-fit: contain;
+            flex: 0 0 auto;
+        }
+
+        .nav-main {
+            flex: 1;
+        }
+
+        .nav-list-main {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex-wrap: wrap;
+
+            gap: clamp(.9rem, 2.2vw, 2rem);
+            font-size: clamp(.95rem, 1.2vw, 1.1rem);
+
+            a {
+                position: relative;
+                padding: .25rem .15rem;
+                opacity: .95;
+            }
+
+            a:hover {
+                opacity: 1;
+            }
+
+            /* underline custom (reset enlève underline) */
+            a::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -0.35rem;
+                width: 0%;
+                height: .12rem;
+                background: currentColor;
+                opacity: .85;
+                transition: width .2s ease;
+            }
+
+            a:hover::after {
+                width: 100%;
+            }
+        }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 56rem) {
+        .nav-top .nav-list {
+            justify-content: center;
+            flex-wrap: wrap;
+            row-gap: .4rem;
+            text-align: center;
+
+            li {
+                white-space: normal;
+            }
+        }
+
+        .under-header {
+            flex-direction: column;
+            align-items: center;
+
+            .nav-list-main {
+                justify-content: center;
+            }
         }
     }
 }

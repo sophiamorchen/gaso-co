@@ -1,0 +1,36 @@
+# =====================
+# OS / Editor
+# =====================
+.DS_Store
+Thumbs.db
+
+# VS Code (on garde settings.json)
+.vscode/*
+!.vscode/settings.json
+
+# =====================
+# Node / npm (si un jour tu ajoutes Node)
+# =====================
+node_modules/
+
+# =====================
+# Sass / CSS
+# =====================
+# Sourcemaps (utiles en dev, inutiles en prod)
+assets/css/*.map
+
+# CSS généré dans scss (ne doit pas exister, mais on protège)
+assets/scss/*.css
+assets/scss/*.css.map
+
+# =====================
+# Logs / temp
+# =====================
+*.log
+
+# =====================
+# PHP / config sensible
+# =====================
+# (décommente si tu as des secrets dedans)
+# includes/config.php
+# includes/db.php

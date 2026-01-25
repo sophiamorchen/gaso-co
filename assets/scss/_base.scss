@@ -1,0 +1,8 @@
+// style pour toutes les pages 
+@use 'globals' as *;
+
+body {
+    font-family: $font-stack;
+    background-color: black;
+    line-height: 1.5;
+}

@@ -1,0 +1,22 @@
+@use 'mixins/mixins' as *;
+@use 'variables' as *;
+
+
+section.container {
+    margin: 1rem 0;
+    border-radius: 1.5rem; // évite les %
+    overflow: hidden; // 🔑 CLÉ ABSOLUE
+    img {
+        opacity: 0.6;
+    }
+    h5, p {
+        color: $terciary-color;
+        font-weight: bolder;
+    }
+
+}
+.card-container {
+    @include justify-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}

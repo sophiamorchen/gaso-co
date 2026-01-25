@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Supprimer les marges par défaut */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+/* Listes propres */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Liens sans underline par défaut */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Images responsives */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Boutons propres */
+button {
+    font: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+}

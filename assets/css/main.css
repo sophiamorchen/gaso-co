@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Montserrat";
   src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
@@ -19,13 +20,211 @@
   font-style: normal;
   font-display: swap;
 }
-header nav {
-  background-color: #ff8801;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-header nav a {
-  color: white;
+
+/* Supprimer les marges par défaut */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* Listes propres */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Liens sans underline par défaut */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Images responsives */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Boutons propres */
+button {
+  font: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+section.container {
+  margin: 1rem 0;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+section.container img {
+  opacity: 0.6;
+}
+section.container h5, section.container p {
+  color: #ff8801;
+  font-weight: bolder;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+header {
+  background: #ff8801;
+  color: #000000;
+  font-weight: bold;
+  /* TOP BAR */
+  /* MAIN BAR */
+  /* RESPONSIVE */
+}
+header .nav-top {
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-block: 0.6rem;
+  padding-inline: clamp(1rem, 4vw, 3rem);
+}
+header .nav-top .nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  opacity: 0.95;
+}
+header .nav-top .nav-list li {
+  white-space: nowrap;
+}
+header .under-header {
+  width: 100%;
+  padding-block: clamp(0.9rem, 2vw, 1.4rem);
+  padding-inline: clamp(1rem, 4vw, 3rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(1rem, 3vw, 2.5rem);
+}
+header .under-header .site-title a {
+  display: inline-block;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.25s ease;
+}
+header .under-header .site-title a:hover {
+  color: #efef3f;
+  text-shadow: 0 0 0.5rem rgba(156, 119, 8, 0.4);
+  transform: scale(1.06);
+}
+header .under-header img {
+  width: clamp(9rem, 16vw, 14rem);
+  aspect-ratio: 5/1;
+  /* logo oblong */
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+header .under-header .nav-main {
+  flex: 1;
+}
+header .under-header .nav-list-main {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(0.9rem, 2.2vw, 2rem);
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  /* underline custom (reset enlève underline) */
+}
+header .under-header .nav-list-main a {
+  position: relative;
+  padding: 0.25rem 0.15rem;
+  opacity: 0.95;
+}
+header .under-header .nav-list-main a:hover {
+  opacity: 1;
+}
+header .under-header .nav-list-main a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.35rem;
+  width: 0%;
+  height: 0.12rem;
+  background: currentColor;
+  opacity: 0.85;
+  transition: width 0.2s ease;
+}
+header .under-header .nav-list-main a:hover::after {
+  width: 100%;
+}
+@media (max-width: 56rem) {
+  header .nav-top .nav-list {
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 0.4rem;
+    text-align: center;
+  }
+  header .nav-top .nav-list li {
+    white-space: normal;
+  }
+  header .under-header {
+    flex-direction: column;
+    align-items: center;
+  }
+  header .under-header .nav-list-main {
+    justify-content: center;
+  }
 }
 
 body {
   font-family: "Montserrat", Arial, sans-serif;
+  background-color: black;
+  line-height: 1.5;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.1rem;
+  border-radius: 0.5rem;
+  background: #000;
+  color: #ff8801;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.12s ease, opacity 0.12s ease;
+}
+
+.btn:hover {
+  opacity: 0.95;
+  transform: translateY(-0.05rem);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn--primary {
+  background: #000;
+  color: #ff8801;
 }/*# sourceMappingURL=main.css.map */
