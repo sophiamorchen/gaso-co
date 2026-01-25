@@ -1,5 +1,9 @@
 // fichier principal qui importe tous les autres
-@import 'variables';
-@import 'footer';
-@import 'header';
-@import 'pages';
+// `@use "globals" as *;` = variables utilisables directement (`$primary-color`)
+// `@use "globals";`     = variables via namespace (`globals.$primary-color`)
+@use 'globals' as *;
+
+
+@use 'footer';
+@use 'header';
+@use 'pages';

@@ -1,4 +1,6 @@
 // styles du header
+@use 'globals' as *;
+
 header {
     nav{
         background-color: $terciary-color;

@@ -1,1 +1,5 @@
 // styles ppour pages (accueil, services ..)
+@use 'globals' as *;
+body {
+    font-family: $font-stack;
+}
