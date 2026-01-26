@@ -69,15 +69,15 @@ button {
   cursor: pointer;
 }
 
-section.container {
-  margin: 1rem 0;
+section.caroussel-container {
+  margin: 1rem auto;
   border-radius: 1.5rem;
   overflow: hidden;
 }
-section.container img {
+section.caroussel-container img {
   opacity: 0.6;
 }
-section.container h5, section.container p {
+section.caroussel-container h4 {
   color: #ff8801;
   font-weight: bolder;
 }
@@ -90,13 +90,16 @@ section.container h5, section.container p {
   gap: 1rem;
   flex-wrap: wrap;
 }
+.card-container h5, .card-container p {
+  font-weight: bolder;
+  text-align: center;
+}
 
 header {
   background: #ff8801;
   color: #000000;
   font-weight: bold;
   /* TOP BAR */
-  /* MAIN BAR */
   /* RESPONSIVE */
 }
 header .nav-top {
@@ -218,6 +221,9 @@ body {
 .btn:hover {
   opacity: 0.95;
   transform: translateY(-0.05rem);
+  background-color: #000;
+  color: #ff8801;
+  font-weight: bold;
 }
 
 .btn:active {

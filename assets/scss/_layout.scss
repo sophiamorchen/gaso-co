@@ -2,14 +2,14 @@
 @use 'variables' as *;
 
 
-section.container {
-    margin: 1rem 0;
+section.caroussel-container {
+    margin: 1rem auto;
     border-radius: 1.5rem; // évite les %
     overflow: hidden; // 🔑 CLÉ ABSOLUE
     img {
         opacity: 0.6;
     }
-    h5, p {
+    h4 {
         color: $terciary-color;
         font-weight: bolder;
     }
@@ -19,4 +19,10 @@ section.container {
     @include justify-between;
     gap: 1rem;
     flex-wrap: wrap;
+    h5, p {
+        // color: $terciary-color;
+        font-weight: bolder;
+        text-align: center;
+
+    }
 }
