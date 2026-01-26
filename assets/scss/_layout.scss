@@ -1,28 +1,297 @@
+@use 'globals' as *;
 @use 'mixins/mixins' as *;
-@use 'variables' as *;
 
+.section-hero {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
 
-section.caroussel-container {
-    margin: 1rem auto;
-    border-radius: 1.5rem; // évite les %
-    overflow: hidden; // 🔑 CLÉ ABSOLUE
-    img {
-        opacity: 0.6;
+    padding: 2.25rem 1.5rem;
+    border-radius: 1.25rem;
+    background: rgba(#000, 0.06);
+    border: 1px solid rgba(#000, 0.08);
+    @include margin-b;
+
+    h1 {
+        font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+        color: $ink;
     }
-    h4 {
-        color: $terciary-color;
-        font-weight: bolder;
+
+    p {
+        max-width: 45rem;
+        margin: 0 auto 1rem auto;
+        color: $ink;
+        font-weight: bold;
     }
 
-}
-.card-container {
-    @include justify-between;
-    gap: 1rem;
-    flex-wrap: wrap;
-    h5, p {
-        // color: $terciary-color;
-        font-weight: bolder;
+    h2 {
+        margin-top: 0.5rem;
+        font-weight: 900;
+        letter-spacing: 0.04em;
+        background: linear-gradient(90deg, $terciary-color, $primary-color);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    img.rounded {
+        border-radius: 1rem !important;
+        filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.25));
+        transition: transform 0.35s ease;
+
+        &:hover {
+            transform: translateY(-6px) scale(1.03);
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
         text-align: center;
 
+        img.rounded {
+            max-width: 14rem;
+        }
+    }
+}
+
+/* =========================
+CAROUSEL
+========================= */
+.caroussel-container {
+    @include margin-b;
+    .carousel {
+        border-radius: 1.25rem;
+        overflow: hidden;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    .carousel-inner img {
+        max-height: 420px;
+        object-fit: cover;
+    }
+
+    .carousel-caption {
+        padding: 1rem 1.25rem;
+        border-radius: 1rem;
+        background: rgba(#000, 0.45);
+        backdrop-filter: blur(4px);
+
+        h4 {
+            margin: 0;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: 0.02em;
+        }
+    }
+}
+
+/* =========================
+CARDS (3 blocs)
+========================= */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    @include margin-b;
+
+    .card {
+        width: auto !important;
+        border: 1px solid rgba(#000, 0.08);
+        border-radius: 1.25rem;
+        overflow: hidden;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+        &:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.18);
+        }
+    }
+
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .card-body {
+        padding: 1.25rem;
+    }
+
+    .card-title {
+        margin-bottom: 0.75rem;
+        font-weight: 900;
+    }
+
+    .btn.btn-primary {
+        background: linear-gradient(90deg, $primary-color, $terciary-color);
+        border: 1px solid rgba(17, 17, 17, 0.35);
+        color: $ink;
+        font-weight: 800;
+        border-radius: 0.9rem;
+        padding: 0.7rem 1rem;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+        }
+    }
+
+    @media (max-width: 992px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: 576px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+SECTION “DEVIS / TARIFS”
+========================= */
+.client-container {
+    @include margin-b;
+    .card-devis .text-bg-dark {
+        border-radius: 1.25rem !important;
+
+        h2 {
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            opacity: 0.9;
+        }
+    }
+
+
+    // mieux sur mobile
+    @media (max-width: 768px) {
+        .row>div {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+/* =========================
+SECTION “GLOBAL”
+========================= */
+.reasons {
+    margin-top: 4rem;
+    @include margin-b
+
+}
+
+// Bannière image + voile
+.reasons__hero {
+    position: relative;
+    padding: 3.5rem 0 4rem;
+    overflow: hidden;
+
+    // Mets ton image ici
+    background-image: url("../img/background-snipper.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+// Voile orange/jaune comme sur ton exemple
+.reasons__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            rgba($terciary-color, 0.82),
+            rgba($primary-color, 0.75));
+}
+
+// Contenu au-dessus du voile
+.reasons__content {
+    position: relative;
+    z-index: 1;
+}
+
+// Titre script (si tu as une police script, mets-la ici)
+.reasons__title {
+    text-align: center;
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    margin: 0 0 2.5rem 0;
+    line-height: 1.1;
+
+    // style “script” approchant sans dépendre d’une police
+    font-size: clamp(1.8rem, 3.2vw, 3rem);
+    font-style: italic;
+    text-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+}
+
+// Grille des cartes
+.reasons__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
+    align-items: stretch;
+
+    @media (max-width: 992px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: 576px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+// Carte jaune
+.reason-card {
+    position: relative;
+    background: $primary-color; // jaune
+    color: #111;
+    padding: 1.6rem 1.4rem;
+    min-height: 170px;
+
+    border-radius: 0.25rem;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+    border: 1px solid rgba(0, 0, 0, 0.18);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 34px rgba(0, 0, 0, 0.22);
+    }
+}
+
+.reason-card__title {
+    margin: 0 0 0.6rem 0;
+    font-weight: 900;
+    font-size: 1.35rem;
+
+    // petit look “écriture” comme sur ton exemple
+    font-style: italic;
+    letter-spacing: 0.01em;
+}
+
+.reason-card__text {
+    margin: 0;
+    font-weight: 600;
+    opacity: 0.9;
+    line-height: 1.45;
+}
+
+// Petit effet “découpe” comme sur 2 cartes de ton visuel
+.reason-card--notch {
+    &::before {
+        content: "";
+        position: absolute;
+        left: -1px;
+        bottom: 36px;
+        width: 18px;
+        height: 34px;
+        background: rgba($terciary-color, 0.35);
+        clip-path: polygon(0 0, 100% 25%, 100% 75%, 0 100%);
     }
 }

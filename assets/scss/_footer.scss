@@ -1,2 +1,129 @@
-// styles du footer
 @use 'globals' as *;
+@use 'mixins/mixins' as *;
+
+.site-footer {
+
+    padding: 3rem 0;
+    color: $ink;
+
+    // titres
+    h5 {
+        font-weight: 800;
+        margin-bottom: 1rem;
+        letter-spacing: 0.02em;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 3px;
+            margin-top: 0.55rem;
+            border-radius: 999px;
+            background: $ink;
+        }
+    }
+
+    // listes "maison"
+    .footer-list {
+        li {
+            padding: 0.25rem 0;
+            transition: transform 0.25s ease, opacity 0.25s ease;
+
+            &:hover {
+                transform: translateX(3px);
+                opacity: 0.9;
+            }
+        }
+    }
+
+    // liens (CGV, etc.)
+    a {
+        transition: transform 0.25s ease, color 0.25s ease, opacity 0.25s ease;
+        &:hover {
+            opacity: 0.85;
+            transform: translateY(-1px);
+        }
+    }
+
+    .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+
+        li {
+            margin: 0;
+        }
+
+        a {
+            font-weight: 700;
+            border-bottom: 2px solid $ink;
+
+            &:hover {
+                border-bottom-color: $ink;
+            }
+        }
+    }
+
+    // CTA
+    .btn.footer-cta,
+    .btn.btn-primary {
+        background: $ink;
+        border: 1px solid $ink;
+        font-weight: 800;
+        padding: 0.75rem 1.1rem;
+        border-radius: 0.75rem;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+            background: $ink;
+            box-shadow: 0 10px 22px rgba(#000, 0.18);
+        }
+    }
+
+    // séparation
+    .border-top {
+        border-color: $ink !important;
+    }
+
+    // meta (texte du bas)
+    .footer-meta {
+        p {
+            color: rgba(#111, 0.85);
+            text-align: center;
+        }
+    }
+
+    // icônes
+    .footer-social {
+        .bi {
+            font-size: 1.6rem;
+            line-height: 1;
+        }
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 999px;
+            background: rgba(#111, 0.08);
+            border: 1px solid rgba(#111, 0.25);
+
+            &:hover {
+                transform: translateY(-3px);
+                background: rgba(#111, 0.12);
+            }
+        }
+    }
+
+    // responsive
+    @media (max-width: 576px) {
+        padding: 2.25rem 0;
+
+        .footer-links {
+            justify-content: center;
+        }
+    }
+}

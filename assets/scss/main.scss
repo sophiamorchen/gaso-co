@@ -1,10 +1,9 @@
-// fichier principal qui importe tous les autres
-// `@use "globals" as *;` = variables utilisables directement (`$primary-color`)
-// `@use "globals";`     = variables via namespace (`globals.$primary-color`)
 @use 'globals' as *;
 @use 'mixins/mixins' as *;
 
-@use 'footer';
-@use 'header';
 @use 'base';
+@use 'header';
+@use 'layout';
+
+@use 'footer';
 @use 'buttons';

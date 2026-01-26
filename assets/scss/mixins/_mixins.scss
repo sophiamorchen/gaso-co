@@ -1,3 +1,7 @@
+
+@use '../variables' as *;
+
+
 @mixin justify-between {
     display: flex;
     flex-direction: row;
@@ -8,4 +12,22 @@
 @mixin text-center {
     display: flex;
     align-items: center;
+}
+@mixin column-center {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin orange-bold {
+    color: $terciary-color;
+    font-weight: bolder;
+}
+@mixin yellow-bold {
+    color: $primary-color;
+    font-weight: bold;;
+}
+@mixin margin-b{
+    margin-bottom: 3rem;
 }

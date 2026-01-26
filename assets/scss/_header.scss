@@ -1,127 +1,201 @@
 // styles du header
 @use 'globals' as *;
 @use 'mixins/mixins' as *;
-header {
+
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 999; // au-dessus du contenu
     background: $terciary-color;
-    color: #000000;
-    font-weight: bold;
-
-    /* TOP BAR */
-    .nav-top {
-        width: 100%;
-        border-bottom: 1px solid rgba(255, 255, 255, .15);
-
-        padding-block: .6rem;
+    color: #111;
+    font-weight: 700;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.10);
+    
+    .container-fluid {
         padding-inline: clamp(1rem, 4vw, 3rem);
-
-        .nav-list {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-
-            font-size: clamp(.85rem, 1.2vw, 1rem);
-            opacity: .95;
-
-            li {
-                white-space: nowrap;
-            }
-        }
     }
 
-    .under-header {
-        width: 100%;
-        padding-block: clamp(.9rem, 2vw, 1.4rem);
-        padding-inline: clamp(1rem, 4vw, 3rem);
-
+    /* TOP */
+    .header-top {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: clamp(1rem, 3vw, 2.5rem);
+        padding-block: 0.9rem;
+    }
 
-        .site-title a {
-                display: inline-block; // 🔑 obligatoire pour transform
-                transition:
-                color .3s ease,
-                text-shadow .3s ease,
-                transform .25s ease;
-            }
-        
-            .site-title a:hover {
-                color: $primary-color;
-                text-shadow: 0 0 .5rem rgba(156, 119, 8, .4);
-                transform: scale(1.06); // 🔥 grossit légèrement
-            }
-        img {
-            width: clamp(9rem, 16vw, 14rem);
-            aspect-ratio: 5 / 1;
-            /* logo oblong */
-            object-fit: contain;
-            flex: 0 0 auto;
-        }
+    .header-brand {
+        background: #fff;
+        border-radius: 0.75rem;
+        padding: 0.9rem 1.1rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 
-        .nav-main {
-            flex: 1;
-        }
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
 
-        .nav-list-main {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            flex-wrap: wrap;
-
-            gap: clamp(.9rem, 2.2vw, 2rem);
-            font-size: clamp(.95rem, 1.2vw, 1.1rem);
+        .site-title {
+            margin: 0;
+            line-height: 1;
 
             a {
-                position: relative;
-                padding: .25rem .15rem;
-                opacity: .95;
-            }
+                display: inline-block;
+                font-weight: 900;
+                letter-spacing: 0.02em;
+                font-size: clamp(1.25rem, 1.6vw, 1.6rem);
+                transition: transform 0.2s ease, color 0.2s ease;
 
-            a:hover {
+                &:hover {
+                    color: $secondary-color;
+                    transform: translateY(-1px);
+                }
+            }
+        }
+
+        .site-tagline {
+            margin-top: 0.35rem;
+            font-weight: 800;
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            opacity: 0.85;
+        }
+    }
+
+    /* NAV */
+    .nav-list-main {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+
+        gap: clamp(0.75rem, 2vw, 1.4rem);
+        margin: 0;
+        padding: 0;
+
+        a {
+            position: relative;
+            padding: 0.35rem 0.25rem;
+            font-size: clamp(0.92rem, 1.1vw, 1.05rem);
+            letter-spacing: 0.01em;
+            opacity: 0.95;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+
+            &:hover {
                 opacity: 1;
+                transform: translateY(-1px);
             }
 
-            /* underline custom (reset enlève underline) */
-            a::after {
+            // underline au hover
+            &::after {
                 content: "";
                 position: absolute;
                 left: 0;
-                bottom: -0.35rem;
+                bottom: 0.1rem;
                 width: 0%;
-                height: .12rem;
-                background: currentColor;
-                opacity: .85;
-                transition: width .2s ease;
+                height: 2px;
+                background: rgba(#111, 0.75);
+                transition: width 0.2s ease;
             }
 
-            a:hover::after {
+            &:hover::after {
                 width: 100%;
+            }
+
+            // ✅ menu actif
+            &.is-active {
+                opacity: 1;
+                font-weight: 900;
+
+                &::after {
+                    width: 100%;
+                    background: rgba(#111, 0.85);
+                }
+            }
+        }
+
+        /* ✅ CTA Devis */
+        .nav-cta {
+            padding: 0.45rem 0.85rem;
+            border-radius: 999px;
+            background: linear-gradient(90deg, $primary-color, #fff);
+            border: 1px solid rgba(#111, 0.25);
+            box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+            font-weight: 900;
+
+            // on enlève l’underline sur le CTA
+            &::after {
+                display: none;
+            }
+
+            &:hover {
+                transform: translateY(-2px);
+            }
+
+            &.is-active {
+                outline: 2px solid rgba(#111, 0.25);
+            }
+        }
+    }
+
+    /* BOTTOM CONTACT */
+    .nav-bottom {
+        padding-block: 0.55rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.12);
+        background: rgba(#fff, 0.12);
+        backdrop-filter: blur(6px);
+    }
+
+    .nav-list {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1.25rem;
+
+        margin: 0;
+        padding: 0;
+
+        font-size: clamp(0.85rem, 1.05vw, 0.95rem);
+        font-weight: 800;
+
+        li {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            white-space: nowrap;
+            opacity: 0.95;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+
+            &:hover {
+                opacity: 1;
+                transform: translateY(-1px);
+            }
+
+            .bi {
+                font-size: 1.05rem;
             }
         }
     }
 
     /* RESPONSIVE */
-    @media (max-width: 56rem) {
-        .nav-top .nav-list {
-            justify-content: center;
-            flex-wrap: wrap;
-            row-gap: .4rem;
-            text-align: center;
-
-            li {
-                white-space: normal;
-            }
+    @media (max-width: 992px) {
+        .header-top {
+            flex-direction: column;
+            align-items: stretch;
         }
 
-        .under-header {
-            flex-direction: column;
+        .header-brand {
             align-items: center;
+            text-align: center;
+        }
 
-            .nav-list-main {
-                justify-content: center;
-            }
+        .nav-list-main {
+            justify-content: center;
+        }
+
+        .nav-list {
+            justify-content: center;
         }
     }
 }

@@ -1,8 +1,14 @@
 // style pour toutes les pages 
 @use 'globals' as *;
 
+
+html {
+    font-size: 100%;
+}
+
 body {
     font-family: $font-stack;
-    background-color: black;
-    line-height: 1.5;
+    line-height: 1.6;
+    background-color: #f3f3f3;
+    color: #e5e5e5;
 }
