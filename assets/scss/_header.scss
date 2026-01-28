@@ -44,11 +44,12 @@
                 font-weight: 900;
                 letter-spacing: 0.02em;
                 font-size: clamp(1.25rem, 1.6vw, 1.6rem);
-                transition: transform 0.2s ease, color 0.2s ease;
-
+        
+                transition: transform 0.25s ease, color 0.25s ease;
+        
                 &:hover {
                     color: $secondary-color;
-                    transform: translateY(-1px);
+                    transform: scale(1.06) translateY(-2px);
                 }
             }
         }

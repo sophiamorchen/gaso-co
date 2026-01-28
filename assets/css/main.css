@@ -121,11 +121,11 @@ body {
   font-weight: 900;
   letter-spacing: 0.02em;
   font-size: clamp(1.25rem, 1.6vw, 1.6rem);
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition: transform 0.25s ease, color 0.25s ease;
 }
 .site-header .header-brand .site-title a:hover {
   color: #75af08;
-  transform: translateY(-1px);
+  transform: scale(1.06) translateY(-2px);
 }
 .site-header .header-brand .site-tagline {
   margin-top: 0.35rem;
@@ -273,6 +273,11 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+.section-hero h2:hover {
+  transform: scale(1.05) translateY(-2px);
+  filter: brightness(1.1);
 }
 .section-hero img.rounded {
   border-radius: 1rem !important;

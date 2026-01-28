@@ -30,10 +30,18 @@
         margin-top: 0.5rem;
         font-weight: 900;
         letter-spacing: 0.04em;
+
         background: linear-gradient(90deg, $terciary-color, $primary-color);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
+
+        transition: transform 0.25s ease, filter 0.25s ease;
+
+        &:hover {
+            transform: scale(1.05) translateY(-2px);
+            filter: brightness(1.1);
+        }
     }
 
     img.rounded {
