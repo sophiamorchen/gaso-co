@@ -32,5 +32,5 @@ assets/scss/*.css.map
 # PHP / config sensible
 # =====================
 # (décommente si tu as des secrets dedans)
-# includes/config.php
-# includes/db.php
+# config.php
+# db.php
