@@ -10,7 +10,7 @@
 
 
 
-    <title>Devis - GaSo&Co </title>
+    <title>GaSo&Co – Entretien, bricolage & location de matériel à Puyoo (64)</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -27,6 +27,7 @@
 <body>
     <header class="site-header">
         <div class="container-fluid">
+
             <div class="header-top">
                 <div class="header-brand">
                     <p class="site-title">
@@ -34,17 +35,18 @@
                     </p>
                     <span class="site-tagline">ENTRETIEN, BRICOLAGE & LOCATION DE MATERIEL</span>
                 </div>
+
                 <div class="nav-div">
                     <nav class="nav-main">
                         <ul class="nav-list-main">
-                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="index.html" class="is-active" aria-current="page">Accueil</a></li>
                             <li><a href="locations.html">Location</a></li>
                             <li><a href="bricolage.html">Bricolage</a></li>
                             <li><a href="espaces-verts.html">Espaces verts</a></li>
 
                             <!-- CTA Devis -->
                             <li>
-                                <a class="nav-cta is-active" href="devis.html" aria-current="page">
+                                <a class="nav-cta" href="devis.html">
                                     Devis
                                 </a>
                             </li>
@@ -68,11 +70,220 @@
             </nav>
         </div>
     </header>
+
     <main>
-    <h1>DEVIS</h1>
-    <p class="text-muted text-center">🚧 Site en cours de construction</p>
+        <p class="text-muted text-center">🚧 Site en cours de construction</p>
+
+        <!-- HERO DEVIS -->
+        <section class="container devis-hero">
+            <div class="devis-hero__content">
+                <p class="devis-hero__kicker"><i class="bi bi-lightning-charge" aria-hidden="true"></i> Devis gratuit &
+                    rapide</p>
+                <h1>Parlez-nous de votre besoin, on s’occupe du reste</h1>
+                <p class="devis-hero__lead">
+                    Location de matériel, bricolage, rénovation, espaces verts : décrivez votre projet et recevez une
+                    réponse claire.
+                </p>
+
+                <div class="devis-hero__badges">
+                    <span class="devis-badge"><i class="bi bi-check2" aria-hidden="true"></i> Réponse rapide</span>
+                    <span class="devis-badge"><i class="bi bi-check2" aria-hidden="true"></i> Conseils honnêtes</span>
+                    <span class="devis-badge"><i class="bi bi-check2" aria-hidden="true"></i> Devis personnalisé</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- CONTENU -->
+        <section class="container devis-wrap">
+            <div class="row g-4 align-items-stretch">
+
+                <!-- FORM -->
+                <div class="col-12 col-lg-7">
+                    <div class="devis-card devis-card--form">
+                        <div class="devis-card__head">
+                            <h2 class="devis-card__title">Demande de devis</h2>
+                            <p class="devis-card__sub">Remplissez le formulaire, on vous recontacte rapidement.</p>
+                        </div>
+
+                        <form class="devis-form" action="#" method="post">
+                            <div class="row g-3">
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label" for="prenom">Prénom</label>
+                                    <input class="form-control" type="text" id="prenom" name="prenom"
+                                        autocomplete="given-name" required />
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label" for="nom">Nom</label>
+                                    <input class="form-control" type="text" id="nom" name="nom"
+                                        autocomplete="family-name" required />
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label" for="tel">Téléphone</label>
+                                    <input class="form-control" type="tel" id="tel" name="tel" autocomplete="tel"
+                                        required />
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label" for="email">Email</label>
+                                    <input class="form-control" type="email" id="email" name="email"
+                                        autocomplete="email" required />
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label" for="service">Type de demande</label>
+                                    <select class="form-select" id="service" name="service" required>
+                                        <option value="" selected disabled>Choisir…</option>
+                                        <option value="location">Location de matériel</option>
+                                        <option value="bricolage">Bricolage / rénovation</option>
+                                        <option value="espaces-verts">Espaces verts</option>
+                                        <option value="autre">Autre</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label" for="ville">Ville / secteur</label>
+                                    <input class="form-control" type="text" id="ville" name="ville"
+                                        placeholder="Ex : Puyoo / Orthez…" required />
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label" for="details">Détails du besoin</label>
+                                    <textarea class="form-control" id="details" name="details" rows="5"
+                                        placeholder="Expliquez votre projet (surface, accès, dates, matériel souhaité, etc.)"
+                                        required></textarea>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label" for="date">Date souhaitée</label>
+                                    <input class="form-control" type="date" id="date" name="date" />
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label" for="budget">Budget (optionnel)</label>
+                                    <input class="form-control" type="text" id="budget" name="budget"
+                                        placeholder="Ex : ~200€" />
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="devis-form__footer">
+                                        <button class="btn devis-submit" type="submit">
+                                            <i class="bi bi-send" aria-hidden="true"></i>
+                                            Envoyer ma demande
+                                        </button>
+                                        <p class="devis-form__note">
+                                            <i class="bi bi-shield-check" aria-hidden="true"></i>
+                                            Vos infos servent uniquement à vous recontacter.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+                <!-- ASIDE -->
+                <div class="col-12 col-lg-5">
+                    <div class="devis-card devis-card--info">
+                        <h2 class="devis-card__title">Comment ça se passe ?</h2>
+
+                        <ol class="devis-steps">
+                            <li class="devis-step">
+                                <span class="devis-step__num">1</span>
+                                <div class="devis-step__body">
+                                    <h3>Vous décrivez votre besoin</h3>
+                                    <p>Quelques infos suffisent : type de service, lieu, timing, détails.</p>
+                                </div>
+                            </li>
+                            <li class="devis-step">
+                                <span class="devis-step__num">2</span>
+                                <div class="devis-step__body">
+                                    <h3>On vous conseille</h3>
+                                    <p>Matériel adapté, durée, consommables : on vous guide simplement.</p>
+                                </div>
+                            </li>
+                            <li class="devis-step">
+                                <span class="devis-step__num">3</span>
+                                <div class="devis-step__body">
+                                    <h3>Vous recevez un devis clair</h3>
+                                    <p>Prix, options, conditions : tout est transparent.</p>
+                                </div>
+                            </li>
+                        </ol>
+
+                        <div class="devis-callout">
+                            <p class="mb-2"><strong>Besoin d’une réponse immédiate ?</strong></p>
+                            <a class="btn devis-callout__btn" href="tel:+33766816511">
+                                <i class="bi bi-telephone" aria-hidden="true"></i> Appeler : 07.66.81.65.11
+                            </a>
+                            <a class="devis-callout__link" href="mailto:gaso.co64@gmail.com">
+                                <i class="bi bi-envelope" aria-hidden="true"></i> gaso.co64@gmail.com
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="container devis-faq">
+            <div class="devis-faq__head">
+                <h2>Questions fréquentes</h2>
+                <p class="text-muted mb-0">Quelques réponses rapides avant de demander votre devis.</p>
+            </div>
+
+            <div class="accordion" id="faqDevis">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="q1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1"
+                            aria-expanded="true" aria-controls="a1">
+                            Le devis est-il gratuit ?
+                        </button>
+                    </h2>
+                    <div id="a1" class="accordion-collapse collapse show" aria-labelledby="q1"
+                        data-bs-parent="#faqDevis">
+                        <div class="accordion-body">
+                            Oui, le devis est gratuit et sans engagement.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="q2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#a2" aria-expanded="false" aria-controls="a2">
+                            Intervenez-vous hors de Puyoo ?
+                        </button>
+                    </h2>
+                    <div id="a2" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#faqDevis">
+                        <div class="accordion-body">
+                            Oui, selon le projet. Indiquez votre ville/secteur et on vous répond.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="q3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#a3" aria-expanded="false" aria-controls="a3">
+                            Puis-je demander un devis pour une location seulement ?
+                        </button>
+                    </h2>
+                    <div id="a3" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#faqDevis">
+                        <div class="accordion-body">
+                            Oui. Précisez le matériel souhaité, la durée et la date, et on vous propose la meilleure
+                            option.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-  <footer class="site-footer py-5 mt-3">
+
+<footer class="site-footer py-5 mt-3">
     <div class="container">
         <div class="row gy-4">
             <div class="col-12 col-md-3">

@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="GaSo&Co : entretien espaces verts, bricolage, rénovation et location de matériel à Puyoo (64). Devis gratuit.">
+        content="Tarifs GaSo&Co : location de matériel, bricolage et entretien des espaces verts à Puyoo (64). Consommables et options. Devis gratuit.">
     <meta name="theme-color" content="#2f6b3c">
-
-
 
     <title>Tarifs - GaSo&Co</title>
 
@@ -21,18 +19,14 @@
     <link rel="shortcut icon" href="assets/img/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
     <link rel="manifest" href="assets/img/site.webmanifest" />
-
 </head>
 
-<body>
+<body class="page-tarifs">
     <header class="site-header">
         <div class="container-fluid">
-
             <div class="header-top">
                 <div class="header-brand">
-                    <p class="site-title">
-                        <a href="index.html">GaSo&Co</a>
-                    </p>
+                    <p class="site-title"><a href="index.html">GaSo&Co</a></p>
                     <span class="site-tagline">ENTRETIEN, BRICOLAGE & LOCATION DE MATERIEL</span>
                 </div>
 
@@ -43,89 +37,427 @@
                             <li><a href="locations.html">Location</a></li>
                             <li><a href="bricolage.html">Bricolage</a></li>
                             <li><a href="espaces-verts.html">Espaces verts</a></li>
-
-                            <!-- CTA Devis -->
-                            <li>
-                                <a class="nav-cta" href="devis.html">
-                                    Devis
-                                </a>
-                            </li>
+                            <li><a class="nav-cta" href="devis.html">Devis</a></li>
                             <li><a class="is-active" href="tarifs.html" aria-current="page">Tarifs</a></li>
                             <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
+
             <nav class="nav-bottom">
                 <ul class="nav-list">
-                    <li>
-                        <i class="bi bi-envelope" aria-hidden="true"></i>
+                    <li><i class="bi bi-envelope" aria-hidden="true"></i>
                         <a href="mailto:gaso.co64@gmail.com">gaso.co64@gmail.com</a>
                     </li>
-                    <li>
-                        <i class="bi bi-telephone" aria-hidden="true"></i>
+                    <li><i class="bi bi-telephone" aria-hidden="true"></i>
                         <a href="tel:+33766816511">07.66.81.65.11</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <main>
-    <h1>TARIFS</h1>
-    <p class="text-muted text-center">🚧 Site en cours de construction</p>
-        </main>
-<footer class="site-footer py-5 mt-3">
-    <div class="container">
-        <div class="row gy-4">
-            <div class="col-12 col-md-3">
-                <h5>Horaires :</h5>
-                <ul class="footer-list">
-                    <li>Lundi au samedi : 7h - 20h</li>
-                    <li>Dimanche : 8h - 12h</li>
+        <section class="container my-5">
+            <header class="tarifs-head text-center">
+                <h1 class="mb-2">Tarifs</h1>
+                <p class="text-muted mb-0">
+                    Indications tarifaires — pour un prix exact selon la durée et le matériel, contactez-nous.
+                </p>
+            </header>
+
+            <!-- Sommaire / ancres -->
+            <nav class="tarifs-nav" aria-label="Sommaire des tarifs">
+                <a class="tarifs-chip" href="#location"><i class="bi bi-tools" aria-hidden="true"></i> Location</a>
+                <a class="tarifs-chip" href="#prestations"><i class="bi bi-tree" aria-hidden="true"></i> Prestations</a>
+                <a class="tarifs-chip" href="#deplacement"><i class="bi bi-geo-alt" aria-hidden="true"></i>
+                    Déplacement</a>
+                <a class="tarifs-chip" href="#consommables"><i class="bi bi-box-seam" aria-hidden="true"></i>
+                    Consommables & options</a>
+            </nav>
+
+            <!-- Encadré infos global -->
+            <div class="tarifs-info" role="note" aria-label="Informations importantes">
+                <i class="bi bi-info-circle tarifs-info__icon" aria-hidden="true"></i>
+                <div class="tarifs-info__content">
+                    <p class="tarifs-info__text mb-1">
+                        Le matériel est proposé prêt à l’emploi, avec sa documentation et les accessoires nécessaires.
+                        Certains équipements ou consommables peuvent être fournis sur demande, selon le matériel et
+                        l’usage prévu.
+                    </p>
+                    <p class="tarifs-info__text mb-0">
+                        <strong>Carburants</strong> (SP, mélange 2T…) et <strong>huiles spécifiques</strong> ne sont
+                        généralement pas inclus, sauf mention contraire.
+                    </p>
+                </div>
+            </div>
+
+            <!-- LOCATION -->
+            <section id="location" class="tarifs-section">
+                <div class="tarifs-section__title">
+                    <h2 class="mb-0">Location de matériel</h2>
+                    <p class="text-muted mb-0">Tarifs</p>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table tarifs-table align-middle">
+                        <thead>
+                            <tr>
+                                <th>Matériel</th>
+                                <th class="text-nowrap">Demi-journée</th>
+                                <th class="text-nowrap">Journée</th>
+                                <th class="text-nowrap">Journée (5+)</th>
+                                <th class="text-nowrap">Sam + dim</th>
+                                <th class="text-nowrap">Semaine (7jours)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Motobineuse</strong> 179cc</td>
+                                <td><strong>59 €</strong></td>
+                                <td><strong>95 €</strong></td>
+                                <td><strong>87 €</strong></td>
+                                <td><strong>179 €</strong></td>
+                                <td><strong>370 €</strong></td>
+
+                            </tr>
+                            <tr>
+                                <td><strong>Remorque double essieu</strong> (PTAC 750 kg)</td>
+                                <td><strong>40 €</strong></td>
+                                <td><strong>69 €</strong></td>
+                                <td><strong>59 €</strong></td>
+                                <td><strong>109 €</strong></td>
+                                <td><strong>290 €</strong></td>
+
+                            </tr>
+                            <tr>
+                                <td><strong>Souffleur Echo 79.9cc</strong></td>
+                                <td><strong>49 €</strong></td>
+                                <td><strong>75 €</strong></td>
+                                <td><strong>68 €</strong></td>
+                                <td><strong>119 €</strong></td>
+                                <td><strong>300 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Carotteuse diamant 2200w</strong></td>
+                                <td><strong>30 €</strong></td>
+                                <td><strong>49 €</strong></td>
+                                <td><strong>44 €</strong></td>
+                                <td><strong>89 €</strong></td>
+                                <td><strong>260 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Support carotteuse</strong></td>
+                                <td><strong>25 €</strong></td>
+                                <td><strong>45 €</strong></td>
+                                <td><strong>39 €</strong></td>
+                                <td><strong>79 €</strong></td>
+                                <td><strong>180 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Marteau perforateur Bosch 5-40 DCE – SDS Max</strong></td>
+                                <td><strong>20 €</strong></td>
+                                <td><strong>35 €</strong></td>
+                                <td><strong>29 €</strong></td>
+                                <td><strong>64 €</strong></td>
+                                <td><strong>180 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Compresseur Mecafer 100L 3CV</strong></td>
+                                <td><strong>50 €</strong></td>
+                                <td><strong>74 €</strong></td>
+                                <td><strong>59 €</strong></td>
+                                <td><strong>109 €</strong></td>
+                                <td><strong>340 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Taille-haie 21,2cc</strong></td>
+                                <td><strong>35 €</strong></td>
+                                <td><strong>55 €</strong></td>
+                                <td><strong>49 €</strong></td>
+                                <td><strong>95 €</strong></td>
+                                <td><strong>270 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tondeuse Weibang 3en1 166cc</strong></td>
+                                <td><strong>35 €</strong></td>
+                                <td><strong>55 €</strong></td>
+                                <td><strong>49 €</strong></td>
+                                <td><strong>95 €</strong></td>
+                                <td><strong>270 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tronçonneuse Husqvarna 40,9cc</strong></td>
+                                <td><strong>30 €</strong></td>
+                                <td><strong>49 €</strong></td>
+                                <td><strong>44 €</strong></td>
+                                <td><strong>87 €</strong></td>
+                                <td><strong>250 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Débroussailleuse Maruyama 49,9cc</strong></td>
+                                <td><strong>39 €</strong></td>
+                                <td><strong>59 €</strong></td>
+                                <td><strong>55 €</strong></td>
+                                <td><strong>99 €</strong></td>
+                                <td><strong>270 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Scie sauteuse pendulaire Ryobi – 680 W</strong></td>
+                                <td><strong>10 €</strong></td>
+                                <td><strong>17 €</strong></td>
+                                <td><strong>14 €</strong></td>
+                                <td><strong>28 €</strong></td>
+                                <td><strong>75 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Meuleuse d’angle Ryobi – 1010 W</strong></td>
+                                <td><strong>14 €</strong></td>
+                                <td><strong>23 €</strong></td>
+                                <td><strong>18 €</strong></td>
+                                <td><strong>39 €</strong></td>
+                                <td><strong>90 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Marteau perforateur Bosch – SDS+</strong></td>
+                                <td><strong>15 €</strong></td>
+                                <td><strong>25 €</strong></td>
+                                <td><strong>19 €</strong></td>
+                                <td><strong>39 €</strong></td>
+                                <td><strong>120 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Groupe électrogène Mecafer 3300</strong></td>
+                                <td><strong>30 €</strong></td>
+                                <td><strong>49 €</strong></td>
+                                <td><strong>44 €</strong></td>
+                                <td><strong>79 €</strong></td>
+                                <td><strong>220 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Coupe parquet</strong></td>
+                                <td><strong>7 €</strong></td>
+                                <td><strong>10 €</strong></td>
+                                <td><strong>8 €</strong></td>
+                                <td><strong>15 €</strong></td>
+                                <td><strong>40 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Échelle pliante articulée (3m)</strong></td>
+                                <td><strong>14 €</strong></td>
+                                <td><strong>23 €</strong></td>
+                                <td><strong>17 €</strong></td>
+                                <td><strong>29 €</strong></td>
+                                <td><strong>90 €</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="tarifs-footnote">
+                    * Une caution est demandée pour tout matériel loué.
+                    <a href="contact.html">Contactez-nous</a> pour une réservation.
+                </p>
+            </section>
+
+            <!-- PRESTATIONS -->
+            <section id="prestations" class="tarifs-section">
+                <div class="tarifs-section__title">
+                    <h2 class="mb-0">Prestations</h2>
+                    <p class="text-muted mb-0">Bricolage & espaces verts</p>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table tarifs-table align-middle">
+                        <thead>
+                            <tr>
+                                <th>Prestation</th>
+                                <th class="text-nowrap">Base</th>
+                                <th>Détails</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Tonte / entretien gazon</strong></td>
+                                <td><strong>— €</strong></td>
+                                <td>Selon surface, accès, évacuation</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Taille de haies</strong></td>
+                                <td><strong>— €</strong></td>
+                                <td>Selon longueur/hauteur, évacuation</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Petits travaux / bricolage</strong></td>
+                                <td><strong>— €</strong></td>
+                                <td>Sur devis selon intervention</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tarifs-callout">
+                    <i class="bi bi-clipboard-check" aria-hidden="true"></i>
+                    <p class="mb-0">
+                        Pour les prestations, un <strong>devis gratuit</strong> est possible selon le chantier.
+                        <a href="devis.html">Faire une demande de devis</a>.
+                    </p>
+                </div>
+            </section>
+
+            <!-- DEPLACEMENT -->
+            <section id="deplacement" class="tarifs-section">
+                <div class="tarifs-section__title">
+                    <h2 class="mb-0">Frais de déplacement</h2>
+                    <p class="text-muted mb-0">Adapté selon la zone</p>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table tarifs-table align-middle">
+                        <thead>
+                            <tr>
+                                <th>Zone</th>
+                                <th class="text-nowrap">Tarif</th>
+                                <th>Détails</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Puyoo & alentours</strong></td>
+                                <td><strong>— €</strong></td>
+                                <td>Selon distance / durée</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Au-delà</strong></td>
+                                <td><strong>— €</strong></td>
+                                <td>Au km ou forfait, selon distance</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- CONSOMMABLES & OPTIONS (ancre pour locations.html#consommables) -->
+            <section id="consommables" class="tarifs-section">
+                <div class="tarifs-section__title">
+                    <h2 class="mb-0">Consommables & options</h2>
+                    <p class="text-muted mb-0">Selon matériel et usage</p>
+                </div>
+
+                <div class="tarifs-callout">
+                    <i class="bi bi-shield-check" aria-hidden="true"></i>
+                    <p class="mb-0">
+                        Certains consommables/équipements sont <strong>inclus</strong> (ex : bâche et filet de protection,
+                        graisses d’entretien),
+                        d’autres peuvent être proposés <strong>en option</strong> selon le besoin. Certains sont fournis gratuitement.
+                    </p>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table tarifs-table align-middle">
+                        <thead>
+                            <tr>
+                                <th>Élément</th>
+                                <th class="text-nowrap">Statut</th>
+                                <th class="text-nowrap">Tarif</th>
+                                <th>Détails</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Bâche de protection</strong> (transport)</td>
+                                <td><span class="tarifs-pill tarifs-pill--ok">Inclus</span></td>
+                                <td>—</td>
+                                <td>Selon disponibilité</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Graisses / entretien courant</strong></td>
+                                <td><span class="tarifs-pill tarifs-pill--ok">Inclus</span></td>
+                                <td>—</td>
+                                <td>Pour usage normal</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Forets / disques / trépans</strong></td>
+                                <td><span class="tarifs-pill tarifs-pill--opt">Option</span></td>
+                                <td><strong>— €</strong></td>
+                                <td>Selon diamètre / usure</td>
+                            </tr>
+                            <tr>
+                                <td><strong>EPI</strong> (gants, lunettes…)</td>
+                                <td><span class="tarifs-pill tarifs-pill--opt">Option</span></td>
+                                <td><strong>— €</strong></td>
+                                <td>Selon matériel</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Carburant / mélange 2T</strong></td>
+                                <td><span class="tarifs-pill tarifs-pill--no">Non inclus</span></td>
+                                <td>—</td>
+                                <td>À fournir par le client sauf mention contraire</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="tarifs-footnote">
+                    Besoin d’un consommable spécifique ? <a href="contact.html">Contactez-nous</a> et on te confirme la
+                    disponibilité.
+                </p>
+            </section>
+
+        </section>
+    </main>
+
+    <footer class="site-footer py-5 mt-3">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-12 col-md-3">
+                    <h5>Horaires :</h5>
+                    <ul class="footer-list">
+                        <li>Lundi au samedi : 7h - 20h</li>
+                        <li>Dimanche : 8h - 12h</li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-3">
+                    <h5>Adresse :</h5>
+                    <ul class="footer-list">
+                        <li>2001 chemin de cassou, 64270 Puyoo</li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-5 offset-md-1">
+                    <h5>Vous avez des questions ?</h5>
+                    <a href="mailto:gaso.co64@gmail.com" class="btn btn-primary footer-cta">Contactez-nous</a>
+                </div>
+            </div>
+
+            <div class="footer-meta d-flex flex-column align-items-center mt-4">
+                <p class="mb-2"><strong>GaSo&Co</strong> - SIRET : 990 761 439 00027 - PUYOO (64)</p>
+                <ul class="footer-links">
+                    <li><a href="cgv.html">CGV</a></li>
+                    <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+                    <li><a href="mentions-legales.html">Mentions légales</a></li>
+                </ul>
+                <p class="mb-0">© 2026 GaSo&Co</p>
+            </div>
+
+            <div class="d-flex justify-content-center py-4 mt-4 border-top">
+                <ul class="list-unstyled d-flex mb-0 footer-social">
+                    <li class="ms-3">
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="ms-3">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                    </li>
                 </ul>
             </div>
-
-            <div class="col-12 col-md-3">
-                <h5>Adresse :</h5>
-                <ul class="footer-list">
-                    <li>2001 chemin de cassou, 64270 Puyoo</li>
-                </ul>
-            </div>
-
-            <div class="col-12 col-md-5 offset-md-1">
-                <h5>Vous avez des questions ?</h5>
-                <a href="mailto:gaso.co64@gmail.com" class="btn btn-primary footer-cta">Contactez-nous</a>
-            </div>
         </div>
+    </footer>
 
-        <div class="footer-meta d-flex flex-column align-items-center mt-4">
-            <p class="mb-2"><strong>GaSo&Co</strong> - SIRET : 990 761 439 00027 - PUYOO (64)</p>
-            <ul class="footer-links">
-                <li><a href="cgv.html">CGV</a></li>
-                <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
-                <li><a href="mentions-legales.html">Mentions légales</a></li>
-            </ul>
-            <p class="mb-0">© 2026 GaSo&Co</p>
-        </div>
-
-        <div class="d-flex justify-content-center py-4 mt-4 border-top">
-            <ul class="list-unstyled d-flex mb-0 footer-social">
-                <li class="ms-3">
-                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
-                </li>
-                <li class="ms-3">
-                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
-
-    </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
