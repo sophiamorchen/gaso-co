@@ -23,7 +23,7 @@
     <link rel="manifest" href="assets/img/site.webmanifest" />
 
 </head>
-<body>
+<body class="page-espaces">
     <header class="site-header">
         <div class="container-fluid">
 
@@ -70,104 +70,155 @@
         </div>
     </header>
     <main>
+        <p class="text-muted text-center">🚧 Site en cours de construction</p>
         <section class="container my-5">
-            <h1 class="text-center mb-3">Entretien des espaces verts</h1>
     
-            <p class="text-center text-muted mb-4">
-                Entretien courant et interventions ponctuelles pour jardins et extérieurs.
-            </p>
-    
-            <!-- Intro -->
-            <div class="rental-info mb-4">
-                <i class="bi bi-info-circle rental-info__icon"></i>
-                <div class="rental-info__content">
-                    <p class="rental-info__text mb-0">
-                        Les prestations seront adaptées à la surface, à l’état du terrain et à la fréquence souhaitée.
-                        Un devis peut être proposé selon le besoin.
+            <!-- HERO -->
+            <div class="service-hero">
+                <div class="service-hero__content">
+                    <h1 class="service-hero__title">Entretien des espaces verts</h1>
+                    <p class="service-hero__subtitle">
+                        Entretien régulier ou intervention ponctuelle : jardins, terrains et extérieurs.
                     </p>
+    
+                    <div class="service-hero__cta">
+                        <a href="devis.html" class="btn btn-primary">Demander un devis</a>
+                        <a href="contact.html" class="btn btn-outline-dark">Poser une question</a>
+                    </div>
+                </div>
+    
+                <div class="service-hero__aside">
+                    <ul class="service-highlights">
+                        <li><i class="bi bi-check2-circle" aria-hidden="true"></i> Intervention ponctuelle ou régulière</li>
+                        <li><i class="bi bi-check2-circle" aria-hidden="true"></i> Matériel adapté</li>
+                        <li><i class="bi bi-check2-circle" aria-hidden="true"></i> Devis gratuit</li>
+                    </ul>
                 </div>
             </div>
     
-            <!-- Prestations -->
-            <section class="mb-5">
-                <h2>Prestations proposées</h2>
-                <ul>
-                    <li>Tonte de pelouse</li>
-                    <li>Débroussaillage</li>
-                    <li>Taille de haies et arbustes</li>
-                    <li>Nettoyage de terrain</li>
-                </ul>
-
+            <!-- CARTES -->
+            <section class="service-block">
+                <h2 class="service-block__title">Prestations (à compléter)</h2>
+    
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="service-card">
+                            <div class="service-card__icon"><i class="bi bi-scissors" aria-hidden="true"></i></div>
+                            <h3 class="service-card__title">Taille de haies</h3>
+                            <p class="service-card__text">Taille, remise en forme, finitions.</p>
+                        </article>
+                    </div>
+    
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="service-card">
+                            <div class="service-card__icon"><i class="bi bi-flower1" aria-hidden="true"></i></div>
+                            <h3 class="service-card__title">Tonte & entretien</h3>
+                            <p class="service-card__text">Entretien régulier, jardins & terrains.</p>
+                        </article>
+                    </div>
+    
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="service-card">
+                            <div class="service-card__icon"><i class="bi bi-wind" aria-hidden="true"></i></div>
+                            <h3 class="service-card__title">Débroussaillage</h3>
+                            <p class="service-card__text">Herbes hautes, zones difficiles, remise au propre.</p>
+                        </article>
+                    </div>
+                </div>
             </section>
     
-            <!-- Organisation -->
-            <section class="mb-5">
-                <h2>Organisation des interventions</h2>
-                <ul>
-                    <li>Intervention ponctuelle ou entretien régulier</li>
-                    <li>Évacuation des déchets verts selon besoin</li>
-                    <li>Matériel adapté fourni</li>
-                </ul>
-
-                <p class="text-muted">
-                    (Liste non exhaustive)
-                </p>
+            <!-- ETAPES -->
+            <section class="service-block">
+                <h2 class="service-block__title">Comment ça se passe</h2>
+    
+                <div class="service-steps">
+                    <div class="service-step">
+                        <span class="service-step__n">1</span>
+                        <div>
+                            <h3 class="service-step__title">Repérage</h3>
+                            <p class="service-step__text">Surface, accès, fréquence souhaitée.</p>
+                        </div>
+                    </div>
+    
+                    <div class="service-step">
+                        <span class="service-step__n">2</span>
+                        <div>
+                            <h3 class="service-step__title">Devis / estimation</h3>
+                            <p class="service-step__text">Selon l’intervention : estimation ou devis.</p>
+                        </div>
+                    </div>
+    
+                    <div class="service-step">
+                        <span class="service-step__n">3</span>
+                        <div>
+                            <h3 class="service-step__title">Intervention</h3>
+                            <p class="service-step__text">Travail soigné, évacuation selon besoin.</p>
+                        </div>
+                    </div>
+                </div>
             </section>
     
-            <!-- CTA -->
-            <div class="text-center">
-                <a href="devis.html" class="btn btn-primary">
-                    Demander un devis
-                </a>
+            <!-- CTA BAS -->
+            <div class="service-cta-bottom">
+                <div class="service-cta-bottom__text">
+                    <h2 class="mb-1">On s’occupe de vos extérieurs</h2>
+                    <p class="text-muted mb-0">Dites-nous la surface et ce que vous souhaitez faire.</p>
+                </div>
+                <div class="service-cta-bottom__actions">
+                    <a href="devis.html" class="btn btn-primary">Demander un devis</a>
+                    <a href="tel:+33766816511" class="btn btn-outline-dark">Appeler</a>
+                </div>
             </div>
+    
         </section>
     </main>
-<footer class="site-footer py-5 mt-3">
-    <div class="container">
-        <div class="row gy-4">
-            <div class="col-12 col-md-3">
-                <h5>Horaires :</h5>
-                <ul class="footer-list">
-                    <li>Lundi au samedi : 7h - 20h</li>
-                    <li>Dimanche : 8h - 12h</li>
+
+    <footer class="site-footer py-5 mt-3">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-12 col-md-3">
+                    <h5>Horaires :</h5>
+                    <ul class="footer-list">
+                        <li>Lundi au samedi : 7h - 20h</li>
+                        <li>Dimanche : 8h - 12h</li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-3">
+                    <h5>Adresse :</h5>
+                    <ul class="footer-list">
+                        <li>2001 chemin de cassou, 64270 Puyoo</li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-5 offset-md-1">
+                    <h5>Vous avez des questions ?</h5>
+                    <a href="mailto:gaso.co64@gmail.com" class="btn btn-primary footer-cta">Contactez-nous</a>
+                </div>
+            </div>
+
+            <div class="footer-meta d-flex flex-column align-items-center mt-4">
+                <p class="mb-2"><strong>GaSo&Co</strong> - SIRET : 990 761 439 00027 - PUYOO (64)</p>
+                <ul class="footer-links">
+                    <li><a href="cgv.html">CGV</a></li>
+                    <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+                    <li><a href="mentions-legales.html">Mentions légales</a></li>
+                </ul>
+                <p class="mb-0">© 2026 GaSo&Co</p>
+            </div>
+
+            <div class="d-flex justify-content-center py-4 mt-4 border-top">
+                <ul class="list-unstyled d-flex mb-0 footer-social">
+                    <li class="ms-3">
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="ms-3">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                    </li>
                 </ul>
             </div>
-
-            <div class="col-12 col-md-3">
-                <h5>Adresse :</h5>
-                <ul class="footer-list">
-                    <li>2001 chemin de cassou, 64270 Puyoo</li>
-                </ul>
-            </div>
-
-            <div class="col-12 col-md-5 offset-md-1">
-                <h5>Vous avez des questions ?</h5>
-                <a href="mailto:gaso.co64@gmail.com" class="btn btn-primary footer-cta">Contactez-nous</a>
-            </div>
         </div>
-
-        <div class="footer-meta d-flex flex-column align-items-center mt-4">
-            <p class="mb-2"><strong>GaSo&Co</strong> - SIRET : 990 761 439 00027 - PUYOO (64)</p>
-            <ul class="footer-links">
-                <li><a href="cgv.html">CGV</a></li>
-                <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
-                <li><a href="mentions-legales.html">Mentions légales</a></li>
-            </ul>
-            <p class="mb-0">© 2026 GaSo&Co</p>
-        </div>
-
-        <div class="d-flex justify-content-center py-4 mt-4 border-top">
-            <ul class="list-unstyled d-flex mb-0 footer-social">
-                <li class="ms-3">
-                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
-                </li>
-                <li class="ms-3">
-                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</footer>
+    </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">

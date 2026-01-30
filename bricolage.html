@@ -18,7 +18,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
     <link rel="manifest" href="assets/img/site.webmanifest" />
 </head>
-<body>
+<body class="page-bricolage">
     <header class="site-header">
         <div class="container-fluid">
             <div class="header-top">
@@ -64,56 +64,108 @@
         </div>
     </header>
     <main>
+        <p class="text-muted text-center">🚧 Site en cours de construction</p>
         <section class="container my-5">
-            <h1 class="text-center mb-3">Bricolage & petits travaux</h1>
-    
-            <p class="text-center text-muted mb-4">
-                Interventions ponctuelles, aide aux travaux et petits aménagements.
-            </p>
-    
-            <!-- Intro -->
-            <div class="rental-info mb-4">
-                <i class="bi bi-info-circle rental-info__icon"></i>
-                <div class="rental-info__content">
-                    <p class="rental-info__text mb-0">
-                        Cette page présente un aperçu des prestations de bricolage proposées.
-                        Chaque intervention fera l’objet d’un échange préalable et, si nécessaire, d’un devis.
+            <!-- HERO -->
+            <div class="service-hero">
+                <div class="service-hero__content">
+                    <h1 class="service-hero__title">Bricolage & petits travaux</h1>
+                    <p class="service-hero__subtitle">
+                        Intervention ponctuelle ou aide sur chantier : on s’adapte à votre besoin.
                     </p>
+
+                    <div class="service-hero__cta">
+                        <a href="devis.html" class="btn btn-primary">Demander un devis</a>
+                        <a href="contact.html" class="btn btn-outline-dark">Poser une question</a>
+                    </div>
+                </div>
+
+                <div class="service-hero__aside">
+                    <ul class="service-highlights">
+                        <li><i class="bi bi-check2-circle" aria-hidden="true"></i> Travail soigné</li>
+                        <li><i class="bi bi-check2-circle" aria-hidden="true"></i> Conseils & accompagnement</li>
+                        <li><i class="bi bi-check2-circle" aria-hidden="true"></i> Devis gratuit</li>
+                    </ul>
                 </div>
             </div>
-    
-            <!-- Prestations (à remplir plus tard) -->
-            <section class="mb-5">
-                <h2>Prestations possibles</h2>
-                <ul>
-                    <li>Petits travaux de réparation</li>
-                    <li>Montage et démontage</li>
-                    <li>Aide à la rénovation</li>
-                    <li>Aménagement intérieur / extérieur</li>
-                </ul>
-                <p class="text-muted">
-                    (Liste non exhaustive)
-                </p>
+
+            <!-- CARTES -->
+            <section class="service-block">
+                <h2 class="service-block__title">Prestations</h2>
+
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="service-card">
+                            <div class="service-card__icon"><i class="bi bi-hammer" aria-hidden="true"></i></div>
+                            <h3 class="service-card__title">Petites réparations</h3>
+                            <p class="service-card__text">Fixations, ajustements, remise en état légère.</p>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="service-card">
+                            <div class="service-card__icon"><i class="bi bi-tools" aria-hidden="true"></i></div>
+                            <h3 class="service-card__title">Montage / démontage</h3>
+                            <p class="service-card__text">Meubles, abris, étagères, éléments divers.</p>
+                        </article>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="service-card">
+                            <div class="service-card__icon"><i class="bi bi-wrench-adjustable" aria-hidden="true"></i></div>
+                            <h3 class="service-card__title">Aide à la rénovation</h3>
+                            <p class="service-card__text">Préparation, petits aménagements, finitions.</p>
+                        </article>
+                    </div>
+                </div>
             </section>
-    
-            <!-- Fonctionnement -->
-            <section class="mb-5">
-                <h2>Fonctionnement</h2>
-                <ul>
-                    <li>Analyse du besoin</li>
-                    <li>Intervention ponctuelle ou régulière</li>
-                    <li>Tarification selon la nature des travaux</li>
-                </ul>
+
+            <!-- ETAPES -->
+            <section class="service-block">
+                <h2 class="service-block__title">Comment ça se passe</h2>
+
+                <div class="service-steps">
+                    <div class="service-step">
+                        <span class="service-step__n">1</span>
+                        <div>
+                            <h3 class="service-step__title">Échange</h3>
+                            <p class="service-step__text">Vous expliquez votre besoin (photos possibles).</p>
+                        </div>
+                    </div>
+
+                    <div class="service-step">
+                        <span class="service-step__n">2</span>
+                        <div>
+                            <h3 class="service-step__title">Proposition</h3>
+                            <p class="service-step__text">Selon le chantier : estimation ou devis.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-step">
+                        <span class="service-step__n">3</span>
+                        <div>
+                            <h3 class="service-step__title">Intervention</h3>
+                            <p class="service-step__text">Réalisation propre, avec matériel adapté.</p>
+                        </div>
+                    </div>
+                </div>
             </section>
-    
-            <!-- CTA -->
-            <div class="text-center">
-                <a href="devis.html" class="btn btn-primary">
-                    Demander un devis
-                </a>
+
+            <!-- CTA BAS -->
+            <div class="service-cta-bottom">
+                <div class="service-cta-bottom__text">
+                    <h2 class="mb-1">Besoin d’un coup de main ?</h2>
+                    <p class="text-muted mb-0">Décrivez votre demande, on revient vers vous rapidement.</p>
+                </div>
+                <div class="service-cta-bottom__actions">
+                    <a href="devis.html" class="btn btn-primary">Demander un devis</a>
+                    <a href="tel:+33766816511" class="btn btn-outline-dark">Appeler</a>
+                </div>
             </div>
+
         </section>
     </main>
+
 
 <footer class="site-footer py-5 mt-3">
     <div class="container">
