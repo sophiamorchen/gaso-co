@@ -6,7 +6,7 @@ include_once __DIR__ . '/includes/header.php';
 <main>
     <section class="container section-hero">
         <div class="flex-fill text-center mx-1">
-            <h1>Des outils et du savoir-faire pour chaque projet</h1>
+            <h1>Des outils et du savoir-faire pour chaque projets</h1>
             <p class="mt-3">
                 Espaces verts, bricolage, chantiers : <?= LOGO ?>vous accompagne avec du matériel performant et des solutions adaptées à tous vos besoins.
             </p>
