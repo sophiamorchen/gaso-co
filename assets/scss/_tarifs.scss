@@ -1,23 +1,28 @@
 @use 'globals' as *;
 @use 'mixins/mixins' as *;
+
 /* ===== PAGE TARIFS ===== */
 main {
-    color: $ink;
-}
-.page-tarifs .tarifs-head h1 {
-    font-weight: 900;
-    letter-spacing: -0.4px;
+  color: $ink;
 }
 
-.page-tarifs .tarifs-nav {
+.page-tarifs {
+  .tarifs-head {
+    h1 {
+      font-weight: 900;
+      letter-spacing: -0.4px;
+    }
+  }
+
+  .tarifs-nav {
     display: flex;
     flex-wrap: wrap;
     gap: .6rem;
     justify-content: center;
     margin: 1rem 0 1.25rem;
-}
+  }
 
-.page-tarifs .tarifs-chip {
+  .tarifs-chip {
     display: inline-flex;
     align-items: center;
     gap: .4rem;
@@ -29,14 +34,14 @@ main {
     color: rgba(17, 17, 17, 0.88);
     font-weight: 800;
     transition: transform .15s ease, box-shadow .15s ease;
-}
 
-.page-tarifs .tarifs-chip:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
-}
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+    }
+  }
 
-.page-tarifs .tarifs-info {
+  .tarifs-info {
     max-width: 980px;
     margin: 0 auto 1.75rem;
     padding: 1rem 1.1rem;
@@ -47,82 +52,89 @@ main {
     display: flex;
     gap: .85rem;
     align-items: flex-start;
-}
 
-.page-tarifs .tarifs-info__icon {
-    font-size: 1.15rem;
-    line-height: 1;
-    margin-top: .15rem;
-    opacity: .75;
-}
+    &__icon {
+      font-size: 1.15rem;
+      line-height: 1;
+      margin-top: .15rem;
+      opacity: .75;
+    }
 
-.page-tarifs .tarifs-info__text {
-    line-height: 1.5;
-    color: rgba(17, 17, 17, 0.82);
-}
+    &__text {
+      line-height: 1.5;
+      color: rgba(17, 17, 17, 0.82);
+    }
+  }
 
-.page-tarifs .tarifs-section {
+  .tarifs-section {
     margin-top: 2rem;
+
+    &__title {
+      margin-bottom: .85rem;
+    }
+  }
 }
 
-.page-tarifs .tarifs-section__title {
-    margin-bottom: .85rem;
-}
+.page-tarifs {
+    .tarifs-table {
+        border: 1px solid rgba(17, 17, 17, 0.08);
+        border-radius: 16px;
+        overflow: hidden;
 
-.page-tarifs .tarifs-table {
-    border: 1px solid rgba(17, 17, 17, 0.08);
-    border-radius: 16px;
-    overflow: hidden;
-}
+        thead {
+            th {
+                background: rgba(0, 0, 0, 0.03);
+                border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+            }
+        }
+    }
 
-.page-tarifs .tarifs-table thead th {
-    background: rgba(0, 0, 0, 0.03);
-    border-bottom: 1px solid rgba(17, 17, 17, 0.08);
-}
+    .tarifs-footnote {
+        margin: .8rem 0 0;
+        color: rgba(17, 17, 17, 0.70);
+        font-size: .95rem;
+    }
 
-.page-tarifs .tarifs-footnote {
-    margin: .8rem 0 0;
-    color: rgba(17, 17, 17, 0.70);
-    font-size: .95rem;
-}
+    .tarifs-callout {
+        display: flex;
+        gap: .6rem;
+        align-items: flex-start;
+        margin: .85rem 0 1rem;
+        padding: .85rem 1rem;
+        border-radius: 14px;
+        background: rgba(0, 0, 0, 0.03);
+        border: 1px solid rgba(17, 17, 17, 0.08);
 
-.page-tarifs .tarifs-callout {
-    display: flex;
-    gap: .6rem;
-    align-items: flex-start;
-    margin: .85rem 0 1rem;
-    padding: .85rem 1rem;
-    border-radius: 14px;
-    background: rgba(0, 0, 0, 0.03);
-    border: 1px solid rgba(17, 17, 17, 0.08);
-}
+        i {
+            margin-top: .15rem;
+            opacity: .75;
+        }
+    }
 
-.page-tarifs .tarifs-callout i {
-    margin-top: .15rem;
-    opacity: .75;
-}
+    .tarifs-pill {
+        display: inline-flex;
+        padding: .2rem .55rem;
+        border-radius: 999px;
+        font-weight: 900;
+        font-size: .8rem;
+        border: 1px solid rgba(17, 17, 17, 0.10);
 
-.page-tarifs .tarifs-pill {
-    display: inline-flex;
-    padding: .2rem .55rem;
-    border-radius: 999px;
-    font-weight: 900;
-    font-size: .8rem;
-    border: 1px solid rgba(17, 17, 17, 0.10);
-}
+        &--ok {
+            background: #23be23;
+        }
 
-.page-tarifs .tarifs-pill--ok {
-    background: rgba(0, 0, 0, 0.05);
-}
+        &--opt {
+            background: #dde030;
+        }
 
-.page-tarifs .tarifs-pill--opt {
-    background: rgba(0, 0, 0, 0.03);
+        &--no {
+            background: #d10b0b;
+        }
+        &--pay {
+            background: #d6860d;
+        }
+    }
 }
-
-.page-tarifs .tarifs-pill--no {
-    background: rgba(0, 0, 0, 0.02);
-}
-
 @media (max-width: 576px) {
     .page-tarifs .tarifs-info {
         padding: .9rem;
